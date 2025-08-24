@@ -182,12 +182,7 @@
   window.PopupWidgetConfig = {
     threshold: 50,        // pixels from top to trigger
     delay: 5000,         // minimum time on page (ms)
-    cookieExpiry: 1,     // days before showing again
-    apiEndpoint: 'https://your-api.com/leads',
-    onEmailSubmit: function(email) {
-      // Custom handler
-      console.log('Email submitted:', email);
-    }
+    cookieExpiry: 1      // days before showing again
   };
 &lt;/script&gt;
 &lt;script src="https://your-domain.com/embed.js"&gt;&lt;/script&gt;</pre>
@@ -199,23 +194,7 @@
   window.PopupWidgetConfig = {
     threshold: 30,        // More sensitive (30px from top)
     delay: 3000,         // Show after 3 seconds
-    cookieExpiry: 7,     // Remember for 7 days
-    apiEndpoint: 'https://api.example.com/newsletter',
-    onEmailSubmit: async function(email) {
-      // Send to your CRM
-      await fetch('/api/crm/add-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          email: email,
-          source: 'exit-intent',
-          timestamp: new Date().toISOString()
-        })
-      });
-      
-      // Show thank you message
-      alert('Thank you for subscribing!');
-    }
+    cookieExpiry: 7      // Remember for 7 days
   };
 &lt;/script&gt;
 &lt;script src="embed.js"&gt;&lt;/script&gt;</pre>
@@ -229,11 +208,7 @@
         window.PopupWidgetConfig = {
             threshold: 50,
             delay: 5000,
-            cookieExpiry: 1,
-            onEmailSubmit: function(email) {
-                alert(`Thank you! We'll contact you at ${email}`);
-                console.log('Email submitted:', email);
-            }
+            cookieExpiry: 1
         };
     </script>
     <script src="embed.js"></script>

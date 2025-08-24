@@ -5,9 +5,7 @@
   window.PopupWidgetConfig = window.PopupWidgetConfig || {
     threshold: 50,
     delay: 5000,
-    cookieExpiry: 1,
-    apiEndpoint: null,
-    onEmailSubmit: null
+    cookieExpiry: 1
   };
 
   // Exit intent detection
@@ -140,28 +138,10 @@
             ">Discover how Request Finance can help streamline your invoicing, payments, and accounting, all in one place.</p>
           </div>
 
-          <form id="popup-form" style="margin-bottom: 24px;">
-            <input 
-              type="email" 
-              id="popup-email"
-              placeholder="Enter your email address"
-              required
-              style="
-                width: 100%;
-                padding: 12px 16px;
-                border: 1px solid #d1d5db;
-                border-radius: 8px;
-                font-size: 16px;
-                margin-bottom: 16px;
-                box-sizing: border-box;
-                transition: all 0.2s;
-              "
-              onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)'"
-              onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'"
-            />
+          <div style="margin-bottom: 24px;">
             <button 
-              type="submit"
-              id="submit-btn"
+              id="demo-btn"
+              onclick="window.open('https://www.request.finance/demo', '_blank'); closePopup();"
               style="
                 width: 100%;
                 background: linear-gradient(45deg, #3b82f6, #2563eb);
@@ -177,7 +157,7 @@
               onmouseover="this.style.background='linear-gradient(45deg, #2563eb, #1d4ed8)'"
               onmouseout="this.style.background='linear-gradient(45deg, #3b82f6, #2563eb)'"
             >Get a live demo</button>
-          </form>
+          </div>
 
           <div style="text-align: center;">
             <div style="display: flex; justify-content: center; margin-bottom: 8px;">
@@ -225,7 +205,7 @@
       }
     });
 
-    document.getElementById('popup-form').addEventListener('submit', handleSubmit);
+    // No form to handle anymore
   }
 
   // Close popup
@@ -239,48 +219,7 @@
     }
   }
 
-  // Handle form submission
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const email = document.getElementById('popup-email').value;
-    const submitBtn = document.getElementById('submit-btn');
-    
-    if (!email) return;
-
-    // Update button state
-    submitBtn.textContent = 'Getting Demo...';
-    submitBtn.disabled = true;
-
-    try {
-      // Custom handler
-      if (window.PopupWidgetConfig.onEmailSubmit) {
-        await window.PopupWidgetConfig.onEmailSubmit(email);
-      } 
-      // API endpoint
-      else if (window.PopupWidgetConfig.apiEndpoint) {
-        const response = await fetch(window.PopupWidgetConfig.apiEndpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, source: 'exit-intent-popup' })
-        });
-        
-        if (!response.ok) throw new Error('Failed to submit');
-      }
-      // Default: console log
-      else {
-        console.log('Exit Intent Popup - Email submitted:', email);
-      }
-
-      // Success feedback
-      submitBtn.textContent = 'Success! ✓';
-      setTimeout(closePopup, 1500);
-
-    } catch (error) {
-      console.error('Error submitting email:', error);
-      submitBtn.textContent = 'Error - Try Again';
-      submitBtn.disabled = false;
-    }
-  }
+  // No form submission needed anymore
 
   // Exit intent detection
   function handleMouseLeave(e) {

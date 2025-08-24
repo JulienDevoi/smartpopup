@@ -1,25 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { X, Sparkles, Users, Shield, Zap } from 'lucide-react';
 
 interface ExitIntentPopupProps {
   isVisible: boolean;
   onClose: () => void;
-  onSubmit: (email: string) => void;
 }
 
-const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose, onSubmit }) => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    await onSubmit(email);
-    setIsSubmitting(false);
+const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose }) => {
+  const handleDemoClick = () => {
+    window.open('https://www.request.finance/demo', '_blank');
+    onClose();
   };
 
   if (!isVisible) return null;
@@ -80,27 +72,15 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose, o
             </p>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 px-4 py-3 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                required
-              />
-            </div>
-            
+          {/* Demo Button */}
+          <div className="mb-6">
             <button
-              type="submit"
-              disabled={isSubmitting || !email}
-              className="w-full rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 font-semibold text-white transition-all hover:from-blue-600 hover:to-blue-700 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              onClick={handleDemoClick}
+              className="w-full rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 font-semibold text-white transition-all hover:from-blue-600 hover:to-blue-700 hover:shadow-lg"
             >
-              {isSubmitting ? 'Getting Demo...' : 'Get a live demo'}
+              Get a live demo
             </button>
-          </form>
+          </div>
 
           {/* Team avatars */}
           <div className="mt-6 flex justify-center">

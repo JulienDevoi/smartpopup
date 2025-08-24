@@ -3,11 +3,6 @@
 import PopupWidget from '@/components/PopupWidget';
 
 export default function Home() {
-  const handleEmailSubmit = async (email: string) => {
-    console.log('Demo: Email submitted:', email);
-    alert(`Thank you! We'll contact you at ${email}`);
-  };
-
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -78,7 +73,6 @@ export default function Home() {
         delay={3000}
         threshold={50}
         cookieExpiry={1}
-        onEmailSubmit={handleEmailSubmit}
       />
     </>
   );
