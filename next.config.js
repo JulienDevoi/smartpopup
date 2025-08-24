@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Remove static export settings for Vercel deployment
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/popup' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/popup' : '',
+  // Remove basePath and assetPrefix for standard Vercel deployment
 }
 
 module.exports = nextConfig
