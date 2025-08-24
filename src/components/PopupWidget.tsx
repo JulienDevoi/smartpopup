@@ -22,6 +22,12 @@ const PopupWidget: React.FC<PopupWidgetProps> = ({
     cookieExpiry
   });
 
+  // Debug logging
+  React.useEffect(() => {
+    console.log('PopupWidget mounted with config:', { threshold, delay, cookieExpiry });
+    console.log('showPopup state:', showPopup);
+  }, [showPopup, threshold, delay, cookieExpiry]);
+
   return (
     <ExitIntentPopup
       isVisible={showPopup}

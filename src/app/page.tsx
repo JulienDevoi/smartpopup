@@ -53,7 +53,7 @@ export default function Home() {
                 <p className="text-gray-500">
                   This is a demo page. The popup will appear when you try to leave!
                 </p>
-                <div className="mt-4">
+                <div className="mt-4 space-y-2">
                   <a 
                     href="/example.html" 
                     target="_blank"
@@ -61,6 +61,18 @@ export default function Home() {
                   >
                     🔗 View Standalone Example Page
                   </a>
+                  <div>
+                    <button 
+                      onClick={() => {
+                        // Clear cookie for testing
+                        document.cookie = 'exitIntentShown=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                        alert('Cookie cleared! Popup should work again.');
+                      }}
+                      className="text-sm text-gray-500 underline hover:text-gray-700"
+                    >
+                      🔄 Reset Popup (for testing)
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -70,7 +82,7 @@ export default function Home() {
       
       {/* The popup widget */}
       <PopupWidget 
-        delay={3000}
+        delay={1000}
         threshold={50}
         cookieExpiry={1}
       />
