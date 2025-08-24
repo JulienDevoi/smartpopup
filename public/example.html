@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit-Intent Popup Widget Example</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        .card h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card li {
+            padding: 8px 0;
+            color: #6b7280;
+        }
+        .card li:before {
+            content: '✓ ';
+            color: #10b981;
+            font-weight: bold;
+        }
+        .test-section {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .test-section h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+        .test-section p {
+            color: #78350f;
+            margin: 0;
+        }
+        .reset-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .reset-btn:hover {
+            background: #dc2626;
+        }
+        .code-block {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .code-block pre {
+            margin: 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Marketing Website Example</h1>
+            <p>This demonstrates how the exit-intent popup widget works on a real website. Try to leave the page by moving your mouse to the top!</p>
+        </div>
+
+        <div class="content">
+            <h2>Exit-Intent Popup Widget Demo</h2>
+            
+            <div class="test-section">
+                <h3>🧪 Test the Widget</h3>
+                <p>Move your mouse cursor to the very top of the browser window to trigger the exit-intent popup!</p>
+                <p><small>Note: You need to wait at least 5 seconds on the page first.</small></p>
+                <button class="reset-btn" onclick="resetExitIntentPopup()">
+                    Reset Popup (for testing)
+                </button>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🎯 Features</h3>
+                    <ul>
+                        <li>Exit-intent detection</li>
+                        <li>Mobile scroll detection</li>
+                        <li>Cookie frequency control</li>
+                        <li>Customizable timing</li>
+                        <li>Modern responsive design</li>
+                        <li>Easy integration</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Configuration</h3>
+                    <ul>
+                        <li>Threshold: 50px from top</li>
+                        <li>Delay: 5 seconds minimum</li>
+                        <li>Cookie expiry: 1 day</li>
+                        <li>Custom API endpoint support</li>
+                        <li>Custom submit handlers</li>
+                        <li>Reset function for testing</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>📱 Mobile Support</h3>
+                    <ul>
+                        <li>Touch-friendly design</li>
+                        <li>Scroll-to-top detection</li>
+                        <li>Responsive layout</li>
+                        <li>Optimized for all devices</li>
+                        <li>Fast loading</li>
+                        <li>Accessible design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>📋 Integration Code</h3>
+            <p>Add this code to your website to integrate the exit-intent popup:</p>
+            
+            <div class="code-block">
+                <pre>&lt;!-- Basic Integration --&gt;
+&lt;script&gt;
+  // Optional: Configure the widget
+  window.PopupWidgetConfig = {
+    threshold: 50,        // pixels from top to trigger
+    delay: 5000,         // minimum time on page (ms)
+    cookieExpiry: 1,     // days before showing again
+    apiEndpoint: 'https://your-api.com/leads',
+    onEmailSubmit: function(email) {
+      // Custom handler
+      console.log('Email submitted:', email);
+    }
+  };
+&lt;/script&gt;
+&lt;script src="https://your-domain.com/embed.js"&gt;&lt;/script&gt;</pre>
+            </div>
+
+            <h3>🔧 Advanced Configuration</h3>
+            <div class="code-block">
+                <pre>&lt;script&gt;
+  window.PopupWidgetConfig = {
+    threshold: 30,        // More sensitive (30px from top)
+    delay: 3000,         // Show after 3 seconds
+    cookieExpiry: 7,     // Remember for 7 days
+    apiEndpoint: 'https://api.example.com/newsletter',
+    onEmailSubmit: async function(email) {
+      // Send to your CRM
+      await fetch('/api/crm/add-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          email: email,
+          source: 'exit-intent',
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      // Show thank you message
+      alert('Thank you for subscribing!');
+    }
+  };
+&lt;/script&gt;
+&lt;script src="embed.js"&gt;&lt;/script&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit-Intent Popup Widget -->
+    <script>
+        // Configure the popup widget
+        window.PopupWidgetConfig = {
+            threshold: 50,
+            delay: 5000,
+            cookieExpiry: 1,
+            onEmailSubmit: function(email) {
+                alert(`Thank you! We'll contact you at ${email}`);
+                console.log('Email submitted:', email);
+            }
+        };
+    </script>
+    <script src="embed.js"></script>
+</body>
+</html>
