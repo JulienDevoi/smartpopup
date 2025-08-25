@@ -59,27 +59,7 @@
           animation: slideIn 0.3s ease-out;
           overflow: hidden;
         ">
-          <button id="close-popup" style="
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            width: 32px;
-            height: 32px;
-            background: white;
-            border: none;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #6b7280;
-            transition: all 0.2s;
-            z-index: 10;
-          " onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='white'">
-            ×
-          </button>
+
 
           <!-- Header image - no margins/padding -->
           <img src="https://smartpopup-smoky.vercel.app/header.png" alt="Request Finance" style="width: 100%; height: auto; object-fit: contain; display: block;" />
@@ -162,8 +142,7 @@
     popupContainer.innerHTML = createPopupHTML();
     document.body.appendChild(popupContainer);
 
-    // Add event listeners
-    document.getElementById('close-popup').addEventListener('click', closePopup);
+    // Add event listener for clicking outside popup
     document.getElementById('exit-intent-popup').addEventListener('click', function(e) {
       if (e.target.id === 'exit-intent-popup') {
         closePopup();

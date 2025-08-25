@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { X } from 'lucide-react';
 
 interface ExitIntentPopupProps {
   isVisible: boolean;
@@ -20,13 +19,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose })
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm">
       <div className="relative mx-4 w-full max-w-lg transform animate-in slide-in-from-bottom-4 duration-300">
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-lg transition-colors hover:bg-gray-50"
-        >
-          <X className="h-4 w-4 text-gray-600" />
-        </button>
+
 
         {/* Main popup content */}
         <div className="rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-2xl overflow-hidden">
