@@ -141,7 +141,7 @@
           <div style="margin-bottom: 24px;">
             <button 
               id="demo-btn"
-              onclick="window.open('https://www.request.finance/demo', '_blank'); closePopup();"
+              onclick="window.open('https://www.request.finance/demo?utm_source=pricing-page&utm_medium=popup&utm_campaign=demo', '_blank'); closePopup();"
               style="
                 width: 100%;
                 background: linear-gradient(45deg, #3b82f6, #2563eb);

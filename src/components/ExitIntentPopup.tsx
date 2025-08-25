@@ -10,7 +10,7 @@ interface ExitIntentPopupProps {
 
 const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose }) => {
   const handleDemoClick = () => {
-    window.open('https://www.request.finance/demo', '_blank');
+    window.open('https://www.request.finance/demo?utm_source=pricing-page&utm_medium=popup&utm_campaign=demo', '_blank');
     onClose();
   };
 
