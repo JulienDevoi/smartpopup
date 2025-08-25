@@ -67,18 +67,22 @@
           <!-- Content with padding -->
           <div style="padding: 32px;">
 
-          <div style="text-align: center; margin-bottom: 24px;">
+          <div style="text-align: center !important; margin-bottom: 24px;">
             <h2 style="
-              font-size: 24px;
-              font-weight: bold;
-              color: #111827;
-              margin: 0 0 12px 0;
-              line-height: 1.2;
+              font-size: 24px !important;
+              font-weight: 600 !important;
+              color: #111827 !important;
+              margin: 0 0 12px 0 !important;
+              line-height: 1.2 !important;
+              text-align: center !important;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
             ">Ready to Simplify Your Finances?</h2>
             <p style="
-              color: #6b7280;
-              margin: 0;
-              line-height: 1.5;
+              color: #6b7280 !important;
+              margin: 0 !important;
+              line-height: 1.5 !important;
+              text-align: center !important;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
             ">Discover how Request Finance can help streamline your invoicing, payments, and accounting, all in one place.</p>
           </div>
 
@@ -87,19 +91,21 @@
               id="demo-btn"
               onclick="window.open('https://www.request.finance/demo?utm_source=pricing-page&utm_medium=popup&utm_campaign=demo', '_blank'); closePopup();"
               style="
-                width: 100%;
-                background: linear-gradient(45deg, #3b82f6, #2563eb);
-                color: white;
-                padding: 12px 24px;
-                border: none;
-                border-radius: 8px;
-                font-size: 16px;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.2s;
+                width: 100% !important;
+                background: linear-gradient(45deg, #3b82f6, #2563eb) !important;
+                color: white !important;
+                padding: 12px 24px !important;
+                border: none !important;
+                border-radius: 8px !important;
+                font-size: 16px !important;
+                font-weight: 600 !important;
+                cursor: pointer !important;
+                transition: all 0.2s !important;
+                text-align: center !important;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
               "
-              onmouseover="this.style.background='linear-gradient(45deg, #2563eb, #1d4ed8)'"
-              onmouseout="this.style.background='linear-gradient(45deg, #3b82f6, #2563eb)'"
+              onmouseover="this.style.background='linear-gradient(45deg, #2563eb, #1d4ed8) !important'"
+              onmouseout="this.style.background='linear-gradient(45deg, #3b82f6, #2563eb) !important'"
             >Get a live demo</button>
           </div>
 
@@ -111,7 +117,7 @@
                 <img src="https://smartpopup-smoky.vercel.app/eduardo.png" alt="Eduardo" title="Eduardo" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
               </div>
             </div>
-            <p style="font-size: 12px; color: #9ca3af; margin: 0;">Fast, Compliant, Scalable.<br />Your Finance Ops HQ, ready when you are.</p>
+            <p style="font-size: 12px !important; color: #9ca3af !important; margin: 0 !important; text-align: center !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;">Fast, Compliant, Scalable.<br />Your Finance Ops HQ, ready when you are.</p>
           </div>
           </div>
         </div>
