@@ -129,7 +129,7 @@ export default function Home() {
                     <li>• Wait at least 1 second on page first</li>
                     <li>• On mobile: scroll to top quickly</li>
                     <li>• Popup shows once per day (cookie-controlled)</li>
-                    <li>• Use "Reset" button to test again</li>
+                    <li>• Use &quot;Reset&quot; button to test again</li>
                   </ul>
                 </div>
               </div>
