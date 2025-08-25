@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { X, Users, Shield, Zap } from 'lucide-react';
+import Image from 'next/image';
+import { X } from 'lucide-react';
 
 interface ExitIntentPopupProps {
   isVisible: boolean;
@@ -30,10 +31,13 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose })
         {/* Main popup content */}
         <div className="rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-2xl overflow-hidden">
           {/* Header image - no margins/padding */}
-          <img 
+          <Image 
             src="/header.png" 
             alt="Request Finance" 
+            width={500}
+            height={200}
             className="w-full h-auto object-contain"
+            priority
           />
           
           {/* Content with padding */}
@@ -62,21 +66,27 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose })
           {/* Team avatars */}
           <div className="mt-6 flex justify-center">
             <div className="flex -space-x-2">
-              <img 
+              <Image 
                 src="/thomas.png" 
                 alt="Thomas" 
+                width={40}
+                height={40}
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                 title="Thomas"
               />
-              <img 
+              <Image 
                 src="/mashudi.png" 
                 alt="Mashudi" 
+                width={40}
+                height={40}
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                 title="Mashudi"
               />
-              <img 
+              <Image 
                 src="/eduardo.png" 
                 alt="Eduardo" 
+                width={40}
+                height={40}
                 className="h-10 w-10 rounded-full border-2 border-white object-cover"
                 title="Eduardo"
               />
