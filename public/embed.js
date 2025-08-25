@@ -82,7 +82,7 @@
           </button>
 
           <!-- Header image - no margins/padding -->
-          <img src="/header.png" alt="Request Finance" style="width: 100%; height: auto; object-fit: contain; display: block;" />
+          <img src="https://smartpopup-smoky.vercel.app/header.png" alt="Request Finance" style="width: 100%; height: auto; object-fit: contain; display: block;" />
           
           <!-- Content with padding -->
           <div style="padding: 32px;">
@@ -126,9 +126,9 @@
           <div style="text-align: center;">
             <div style="display: flex; justify-content: center; margin-bottom: 8px;">
               <div style="display: flex; margin-left: -8px;">
-                <img src="/thomas.png" alt="Thomas" title="Thomas" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
-                <img src="/mashudi.png" alt="Mashudi" title="Mashudi" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
-                <img src="/eduardo.png" alt="Eduardo" title="Eduardo" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
+                <img src="https://smartpopup-smoky.vercel.app/thomas.png" alt="Thomas" title="Thomas" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
+                <img src="https://smartpopup-smoky.vercel.app/mashudi.png" alt="Mashudi" title="Mashudi" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
+                <img src="https://smartpopup-smoky.vercel.app/eduardo.png" alt="Eduardo" title="Eduardo" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
               </div>
             </div>
             <p style="font-size: 12px; color: #9ca3af; margin: 0;">Fast, Compliant, Scalable.<br />Your Finance Ops HQ, ready when you are.</p>
