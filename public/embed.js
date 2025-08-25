@@ -55,9 +55,9 @@
           margin: 0 16px;
           background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
           border-radius: 16px;
-          padding: 32px;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
           animation: slideIn 0.3s ease-out;
+          overflow: hidden;
         ">
           <button id="close-popup" style="
             position: absolute;
@@ -76,52 +76,16 @@
             font-size: 16px;
             color: #6b7280;
             transition: all 0.2s;
+            z-index: 10;
           " onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background='white'">
             ×
           </button>
 
-          <div style="text-align: center; margin-bottom: 24px;">
-            <div style="
-              width: 64px;
-              height: 64px;
-              background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-              border-radius: 50%;
-              margin: 0 auto 16px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: white;
-              font-size: 24px;
-            ">✨</div>
-            
-            <div style="margin-bottom: 16px;">
-              <span style="
-                background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-                color: white;
-                padding: 4px 16px;
-                border-radius: 20px;
-                font-size: 14px;
-                font-weight: 600;
-              ">$1B+ paid through Request Finance</span>
-            </div>
-
-            <div style="
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              gap: 16px;
-              margin-bottom: 24px;
-              opacity: 0.6;
-              font-size: 12px;
-              color: #6b7280;
-            ">
-              <span>Fantom</span>
-              <span>NEAR</span>
-              <span>Merit Circle</span>
-              <span>CORE</span>
-              <span>SANDBOX</span>
-            </div>
-          </div>
+          <!-- Header image - no margins/padding -->
+          <img src="/header.png" alt="Request Finance" style="width: 100%; height: auto; object-fit: contain; display: block;" />
+          
+          <!-- Content with padding -->
+          <div style="padding: 32px;">
 
           <div style="text-align: center; margin-bottom: 24px;">
             <h2 style="
@@ -162,12 +126,13 @@
           <div style="text-align: center;">
             <div style="display: flex; justify-content: center; margin-bottom: 8px;">
               <div style="display: flex; margin-left: -8px;">
-                <div style="width: 32px; height: 32px; background: linear-gradient(45deg, #60a5fa, #a78bfa); border-radius: 50%; border: 2px solid white; margin-left: -8px;"></div>
-                <div style="width: 32px; height: 32px; background: linear-gradient(45deg, #34d399, #60a5fa); border-radius: 50%; border: 2px solid white; margin-left: -8px;"></div>
-                <div style="width: 32px; height: 32px; background: linear-gradient(45deg, #fbbf24, #f59e0b); border-radius: 50%; border: 2px solid white; margin-left: -8px;"></div>
+                <img src="/thomas.png" alt="Thomas" title="Thomas" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
+                <img src="/mashudi.png" alt="Mashudi" title="Mashudi" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
+                <img src="/eduardo.png" alt="Eduardo" title="Eduardo" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; margin-left: -8px; object-fit: cover;" />
               </div>
             </div>
-            <p style="font-size: 12px; color: #9ca3af; margin: 0;">Trusted by 1000+ companies worldwide</p>
+            <p style="font-size: 12px; color: #9ca3af; margin: 0;">Fast, Compliant, Scalable.<br />Your Finance Ops HQ, ready when you are.</p>
+          </div>
           </div>
         </div>
       </div>

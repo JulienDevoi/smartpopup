@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { X, Sparkles, Users, Shield, Zap } from 'lucide-react';
+import { X, Users, Shield, Zap } from 'lucide-react';
 
 interface ExitIntentPopupProps {
   isVisible: boolean;
@@ -28,39 +28,16 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose })
         </button>
 
         {/* Main popup content */}
-        <div className="rounded-2xl bg-gradient-to-br from-white to-gray-50 p-8 shadow-2xl">
-          {/* Header with sparkles */}
-          <div className="mb-6 text-center">
-            <div className="mb-4 flex justify-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
-                <Sparkles className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            
-            <div className="mb-2">
-              <span className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-1 text-sm font-semibold text-white">
-                $1B+ paid through Request Finance
-              </span>
-            </div>
-
-            {/* Partner logos */}
-            <div className="mb-6 flex flex-wrap items-center justify-center gap-4 opacity-60">
-              <div className="flex items-center gap-1 text-xs font-medium text-gray-600">
-                <Shield className="h-3 w-3" />
-                Fantom
-              </div>
-              <div className="flex items-center gap-1 text-xs font-medium text-gray-600">
-                <Zap className="h-3 w-3" />
-                NEAR
-              </div>
-              <div className="flex items-center gap-1 text-xs font-medium text-gray-600">
-                <Users className="h-3 w-3" />
-                Merit Circle
-              </div>
-              <div className="text-xs font-medium text-gray-600">CORE</div>
-              <div className="text-xs font-medium text-gray-600">SANDBOX</div>
-            </div>
-          </div>
+        <div className="rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-2xl overflow-hidden">
+          {/* Header image - no margins/padding */}
+          <img 
+            src="/header.png" 
+            alt="Request Finance" 
+            className="w-full h-auto object-contain"
+          />
+          
+          {/* Content with padding */}
+          <div className="p-8">
 
           {/* Main heading */}
           <div className="mb-6 text-center">
@@ -85,15 +62,31 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isVisible, onClose })
           {/* Team avatars */}
           <div className="mt-6 flex justify-center">
             <div className="flex -space-x-2">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 border-2 border-white"></div>
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500 border-2 border-white"></div>
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 border-2 border-white"></div>
+              <img 
+                src="/thomas.png" 
+                alt="Thomas" 
+                className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                title="Thomas"
+              />
+              <img 
+                src="/mashudi.png" 
+                alt="Mashudi" 
+                className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                title="Mashudi"
+              />
+              <img 
+                src="/eduardo.png" 
+                alt="Eduardo" 
+                className="h-10 w-10 rounded-full border-2 border-white object-cover"
+                title="Eduardo"
+              />
             </div>
           </div>
 
           {/* Trust indicators */}
           <div className="mt-4 text-center text-xs text-gray-500">
-            Trusted by 1000+ companies worldwide
+          Fast, Compliant, Scalable. <br />Your Finance Ops HQ, ready when you are.
+          </div>
           </div>
         </div>
       </div>
